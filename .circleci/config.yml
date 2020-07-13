@@ -50,8 +50,8 @@ jobs:
           when: on_fail
           
       - run:
-        name: Populate EnvFile
-        command: bash export.sh
+          name: Populate EnvFile
+          command: bash export.sh
 
   android:
     working_directory: ~/build
@@ -108,8 +108,8 @@ jobs:
           when: on_fail
 
       - run:
-        name: Populate EnvFile
-        command: bash export.sh
+          name: Populate EnvFile
+          ommand: bash export.sh
 
   ios:
     macos:
@@ -223,8 +223,8 @@ jobs:
           when: on_fail
           
       - run:
-        name: Populate EnvFile
-        command: bash export.sh
+          name: Populate EnvFile
+          command: bash export.sh
 
 workflows:
   version: 2
