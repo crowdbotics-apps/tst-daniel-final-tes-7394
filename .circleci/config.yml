@@ -48,6 +48,10 @@ jobs:
           name: Webhook Failed
           command: bash .circleci/webhook_callback.sh "failure"
           when: on_fail
+          
+      - run:
+        name: Populate EnvFile
+        command: bash export.sh
 
   android:
     working_directory: ~/build
@@ -102,6 +106,10 @@ jobs:
           name: Webhook Failed
           command: bash .circleci/webhook_callback.sh "failure"
           when: on_fail
+
+      - run:
+        name: Populate EnvFile
+        command: bash export.sh
 
   ios:
     macos:
@@ -213,6 +221,10 @@ jobs:
           name: Webhook Failed
           command: bash .circleci/webhook_callback.sh "failure"
           when: on_fail
+          
+      - run:
+        name: Populate EnvFile
+        command: bash export.sh
 
 workflows:
   version: 2
